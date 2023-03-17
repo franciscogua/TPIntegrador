@@ -1,25 +1,51 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ronda {
 
-    //Atributos
-    String nroRonda;
-    List<Partido> partidos;  // Que les parece que usemos listas en vez de array aqui?
+    // Atributos
+    private int rondaID;
+    private List<Partido> partidos;  // Que les parece que usemos listas en vez de array aqui?
 
-    //Getters y Setters
-    public String getNroRonda() {
-        return nroRonda;
+
+    // Constructor
+    public Ronda(int rondaID) {
+        this.rondaID = rondaID;
+        this.partidos = new ArrayList<Partido>();
     }
 
-    public void setNroRonda(String nroRonda) {
-        this.nroRonda = nroRonda;
+    // Getters
+    public int getrondaID() {
+        return rondaID;
     }
 
     public List<Partido> getPartidos() {
         return partidos;
     }
 
-    public void setPartidos(List<Partido> partidos) {
-        this.partidos = partidos;
+
+    // Este metodo agrega partidos a la ronda.
+    public void addPartido(Partido partido) {
+        this.partidos.add(partido);
     }
+
+
+    // Este metodo devuelve el partido de la ronda que concide con los argumentos.
+    public Partido returnPartido(Equipo equipo1, Equipo equipo2) {
+        Partido result = null;
+        for (int i = 0; i < partidos.size(); i++) {
+            if (partidos.get(i).compararPartido(equipo1, equipo2)) {
+                result =  partidos.get(i);
+                break;
+            }
+        }
+        return result;
+    }
+
+
+    /*
+    public int puntos() {
+        return 1;
+    }
+    */
 }
