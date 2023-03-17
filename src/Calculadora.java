@@ -76,7 +76,7 @@ public class Calculadora {
 
             // Iterando por los pronosticos de la lista de pronosticos, vamos sumando el puntaje
             for (Pronostico p : pronosticoList) {
-                puntaje = p.puntos();
+                puntaje += p.puntos();
             }
 
             System.out.printf("Puntaje = %d", puntaje);
@@ -85,10 +85,10 @@ public class Calculadora {
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ERROR! Argumentos incorrectos.");
         }
-        catch (RuntimeException ignored) {}
         catch (IOException ioe) {
             System.out.println("ERROR! Algun archivo no encontrado.");
         }
+        catch (RuntimeException ignored) {}
     }
 
 
