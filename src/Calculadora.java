@@ -85,10 +85,13 @@ public class Calculadora {
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ERROR! Argumentos incorrectos.");
         }
-        catch (IOException ioe) {
-            System.out.println("ERROR! Algun archivo no encontrado.");
-        }
         catch (RuntimeException ignored) {}
+        catch (IOException ioe) {
+            System.out.println("ERROR! Algun archivo de entrada no encontrado.");
+        }
+        catch (Exception e) {
+            System.out.println("ERROR! Algun pronostico no coincide con los partidos de los resultados.");
+        }
     }
 
 

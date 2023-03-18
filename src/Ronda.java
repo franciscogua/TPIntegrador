@@ -31,7 +31,7 @@ public class Ronda {
 
 
     // Este metodo devuelve el partido de la ronda que concide con los argumentos.
-    public Partido returnPartido(Equipo equipo1, Equipo equipo2) {
+    public Partido returnPartido(Equipo equipo1, Equipo equipo2) throws Exception {
         Partido result = null;
         for (int i = 0; i < partidos.size(); i++) {
             if (partidos.get(i).compararPartido(equipo1, equipo2)) {
@@ -39,6 +39,7 @@ public class Ronda {
                 break;
             }
         }
+        if (result == null) throw new Exception();
         return result;
     }
 
