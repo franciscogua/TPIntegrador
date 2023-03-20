@@ -79,7 +79,7 @@ public class Calculadora {
                 puntaje += p.puntos();
             }
 
-            System.out.printf("Puntaje = %d", puntaje);
+            System.out.printf("Puntaje = %d%n", puntaje);
 
         }
         catch (ArrayIndexOutOfBoundsException e) {
