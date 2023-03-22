@@ -4,7 +4,6 @@ Repositorio donde se subirán los proyectos pertinentes al Trabajo Integrador de
 Grupo 7:
 
 - Ignacio Augé
+- Adrián Manuel Colque
 - Francisco Guarino
-- Adrián ...
-- Saul ...
 - Leandro Zappani
